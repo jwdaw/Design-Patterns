@@ -1,6 +1,8 @@
 package strategy;
+import java.util.Random;
 
 public class Goalie extends Player{
+    public Random rand = new Random();
     public Goalie(String firstName, String lastName)
     {
         super(firstName, lastName);
@@ -20,6 +22,6 @@ public class Goalie extends Player{
 
     public String toString()
     {
-        return "plays the position: Goalie";
+        return super.toString() + "plays the position: Goalie";
     }
 }

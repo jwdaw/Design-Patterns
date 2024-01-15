@@ -2,6 +2,6 @@ package strategy;
 public class SlapShotBehavior implements OffenceBehavior{
     public String play()
     {
-        return "";
+        return "Shoots the puck from the blue line";
     }
 }

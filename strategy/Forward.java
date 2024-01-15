@@ -1,7 +1,8 @@
 package strategy;
+import java.util.Random;
 
 public class Forward extends Player {
-    
+    public Random rand = new Random();
     public Forward(String firstName, String lastName)
     {
         super(firstName, lastName);
@@ -15,6 +16,8 @@ public class Forward extends Player {
             offenceBehavior = new PassBehavior();
         else
             offenceBehavior = new ShootBehavior();
+        randInt = 0; 
+
     }
 
     @Override
@@ -25,5 +28,11 @@ public class Forward extends Player {
             defenceBehavior = new ChasePuckBehavior();
         else
             defenceBehavior = new BlockBehavior();
+        randInt = 0; 
+    }
+
+    public String toString()
+    {
+        return super.toString() + "plays the position: Forward";
     }
 }

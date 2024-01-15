@@ -4,6 +4,6 @@ public class ChasePuckBehavior implements DefenceBehavior
 {
     public String play()
     {
-        return "";
+        return "Chases the puck";
     }
 }

@@ -2,6 +2,6 @@ package strategy;
 public class PassBehavior implements OffenceBehavior{
     public String play()
     {
-        return "";
+        return "Passes to a forward";
     }
 }

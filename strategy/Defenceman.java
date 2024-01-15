@@ -1,7 +1,9 @@
 package strategy;
+import java.util.Random;
 
 public class Defenceman extends Player {
 
+    public Random rand = new Random(); 
     public Defenceman(String firstName,String lastName)
     {
         super(firstName, lastName);
@@ -15,6 +17,8 @@ public class Defenceman extends Player {
             offenceBehavior = new SlapShotBehavior();
         else
             offenceBehavior = new PassBehavior();
+        randInt = 0; 
+
     }
 
     @Override
@@ -25,10 +29,12 @@ public class Defenceman extends Player {
             defenceBehavior = new ChasePuckBehavior();
         else
             defenceBehavior = new BlockBehavior();
+        randInt = 0; 
+
     }
 
     public String toString()
     {
-        return "plays the position: Defenceman";
+        return super.toString() + "plays the position: Defenceman";
     }
 }

@@ -20,15 +20,17 @@ public abstract class Player {
     {
         if(possession == true)
         {
-           return defenceBehavior.play();   
+            setOffenceBehavior();
+           return offenceBehavior.play();   
         }
         else
         {
-            return offenceBehavior.play();
+            setDefenceBehaivor();
+            return defenceBehavior.play();
         }
     }
     public String toString()
     {
-        return "";
+        return firstName + " " + lastName + " ";
     }
 }
