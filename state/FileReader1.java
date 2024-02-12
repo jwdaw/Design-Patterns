@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class FileReader {
-    public static ArrayList<String> getWords(String fileName) {
+public class FileReader1 {
+    public static ArrayList<Word> getWords(String fileName) {
         ArrayList<String> words = new ArrayList<String>();
 
         try {

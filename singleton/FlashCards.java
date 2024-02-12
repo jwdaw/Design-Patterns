@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class FlashCards {
     private Random rand;
     private static FlashCards flashCards;
-    private ArrayList<Word> words = new ArrayList<Word>();
+    private ArrayList<Word> words;
     private Word currentWord;
 
     /**
@@ -15,8 +15,8 @@ public class FlashCards {
      */
     private FlashCards()
     {
-        flashCards = new FlashCards();
         rand = new Random();
+        words = FileReader.getWords();
     }
     
     /**
@@ -25,11 +25,17 @@ public class FlashCards {
      */
     public static FlashCards getInstance()
     {
+        flashCards = new FlashCards();
         return flashCards;
     }
 
+    /**
+     * sets current word to a random word and returns it
+     * @return a randomized word
+     */
     public Word getWord()
     {
+        currentWord = words.get(rand.nextInt(words.size()));
         return currentWord;
     }
 

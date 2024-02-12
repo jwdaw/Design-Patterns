@@ -9,7 +9,7 @@ public class ThirdGradeState extends State{
      */
     ThirdGradeState(SpellingList spellingList){
         super(spellingList);
-        words = FileReader.getWords("state\third.txt");
+        words = FileReader1.getWords("state\third.txt");
     }
     /**
      * increases grade to nothing and displays error msg

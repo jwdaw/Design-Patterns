@@ -9,7 +9,7 @@ public class SecondGradeState extends State{
      */
     SecondGradeState(SpellingList spellingList){
         super(spellingList);
-        words = FileReader.getWords("state\\second.txt");
+        words = FileReader1.getWords("state\\second.txt");
     }
 
     /**
